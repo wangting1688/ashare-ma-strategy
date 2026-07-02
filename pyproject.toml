@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ashare-ma-strategy"
+version = "0.1.0"
+description = "A-share V9/V5 dynamic moving-average strategy toolkit with trailing stop and trend-strength filter."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Adam Wang"}]
+keywords = ["A-share", "quant", "moving-average", "backtest", "trading-strategy"]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+data = ["baostock>=0.8.9"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+ashare-ma = "ashare_ma_strategy.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
