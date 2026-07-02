@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.venv/
+venv/
+
+# Data and outputs
+/data/
+/ashare_data/
+*.log
+*.sqlite
+*.db
+scan_results_*.json
+scan_results_*.html
+trades_*.csv
+
+# Secrets
+.env
+*.key
+secrets.*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
